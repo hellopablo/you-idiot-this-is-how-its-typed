@@ -37,14 +37,18 @@ if(typeof jQuery != 'undefined') {
 									$$.blur( function() { $(this).val( $(this).val().toLowerCase() ) } );
 								break;
 								
-								//	Title Case
+								//	Title Case - Thanks to Greg Dean http://stackoverflow.com/questions/196972/convert-string-to-proper-case-with-javascript/196991#196991
 								case 'title' :
-								
+									$$.blur( function() {
+										$(this).val( $(this).val().replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) );
+									} );
 								break;
 								
 								//	Sentence Case
 								case 'sentence' :
-								
+									$$.blur( function() {
+										$(this).val( $(this).val().charAt(0).toUpperCase() + $(this).val().substr(1).toLowerCase() );
+									} );
 								break;
 								
 								//	Numeric
@@ -81,12 +85,16 @@ if(typeof jQuery != 'undefined') {
 								
 								//	Title Case
 								case 'title' :
-								
+									$$.keyup( function() {
+										$(this).val( $(this).val().replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) );
+									} );
 								break;
 								
 								//	Sentence Case
 								case 'sentence' :
-								
+									$$.keyup( function() {
+										$(this).val( $(this).val().charAt(0).toUpperCase() + $(this).val().substr(1).toLowerCase() );
+									} );
 								break;
 								
 								//	Numeric
