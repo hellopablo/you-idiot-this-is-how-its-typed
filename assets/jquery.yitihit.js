@@ -3,8 +3,8 @@
 /*!
 * YouIdiotThisIsHowItsTyped: a jQuery Plugin to stop people being idiots
 * @author: Pablo de la Peña (hellopablo)
-* @url: http://www.trovster.com/lab/code/plugins/jquery.YouIdiotThisIsHowItsTyped.js
-* @documentation: http://www.trovster.com/lab/plugins/YouIdiotThisIsHowItsTyped/
+* @url: http://jquery.hellopablo.co.uk/yitihit/assetsjquery.yitihit.js
+* @documentation: http://jquery.hellopablo.co.uk/yitihit
 * @published: 11/09/2008
 * @updated: 26/02/2011
 * @license Creative Commons Attribution Non-Commercial Share Alike 3.0 Licence
@@ -29,41 +29,122 @@ if(typeof jQuery != 'undefined') {
 							{
 								//	Upper case
 								case 'upper' :
-									$$.blur( function() { $(this).val( $(this).val().toUpperCase() ) } );
+									$$.blur(
+										function()
+										{
+											if ( $$.hasClass( 'yitihit-ed' ) === false )
+											{
+												$(this).val( $(this).val().toUpperCase() );
+												if ( o.editable === true )
+												{
+													$$.addClass( 'yitihit-ed' );
+												}
+											}
+										}
+									);
 								break;
 								
 								//	Lower case
 								case 'lower' :
-									$$.blur( function() { $(this).val( $(this).val().toLowerCase() ) } );
+									$$.blur(
+										function()
+										{
+											if ( $$.hasClass( 'yitihit-ed' ) === false )
+											{
+												$(this).val( $(this).val().toLowerCase() )
+												if ( o.editable === true )
+												{
+													$$.addClass( 'yitihit-ed' );
+												}
+											}
+										}
+									);
 								break;
 								
 								//	Title Case - Thanks to Greg Dean http://stackoverflow.com/questions/196972/convert-string-to-proper-case-with-javascript/196991#196991
 								case 'title' :
-									$$.blur( function() {
-										$(this).val( $(this).val().replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) );
-									} );
+									$$.blur(
+										function()
+										{
+											if ( $$.hasClass( 'yitihit-ed' ) === false )
+											{
+												$(this).val( $(this).val().replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) );
+												if ( o.editable === true )
+												{
+													$$.addClass( 'yitihit-ed' );
+												}
+											}
+										}
+									);
 								break;
 								
 								//	Sentence Case
 								case 'sentence' :
-									$$.blur( function() {
-										$(this).val( $(this).val().charAt(0).toUpperCase() + $(this).val().substr(1).toLowerCase() );
-									} );
+									$$.blur(
+										function()
+										{
+											if ( $$.hasClass( 'yitihit-ed' ) === false )
+											{
+												$(this).val( $(this).val().charAt(0).toUpperCase() + $(this).val().substr(1).toLowerCase() );
+												if ( o.editable === true )
+												{
+													$$.addClass( 'yitihit-ed' )
+												}
+											}
+										}
+									);
 								break;
 								
 								//	Numeric
 								case 'numeric' :
-									$$.blur( function() { $(this).val( $(this).val().replace( /[^\d]/gi, '' ) ) } );
+									$$.blur(
+										function()
+										{
+											if ( $$.hasClass( 'yitihit-ed' ) === false )
+											{
+												$(this).val( $(this).val().replace( /[^\d]/gi, '' ) );
+												if ( o.editable === true)
+												{
+													$$.addClass( 'yitihit-ed' );
+												}
+											}
+										}
+									);
 								break;
 								
 								//	Alpha
 								case 'alpha' :
-									$$.blur( function() { $(this).val( $(this).val().replace( /[^a-zA-Z]/gi, '' ) ) } );
+									$$.blur(
+										function()
+										{
+											if ( $$.hasClass( 'yitihit-ed' ) === false )
+											{
+												$(this).val( $(this).val().replace( /[^a-zA-Z]/gi, '' ) );
+												if ( o.editable === true)
+												{
+													$$.addClass( 'yitihit-ed' );
+												}
+											}
+										}
+									);
 								break;
 								
 								//	Alpha Dash
 								case 'alphadash' :
-									$$.blur( function() { $(this).val( $(this).val().replace( /[^a-zA-Z-_ ]/gi, '' ) ) } );
+									$$.blur(
+										function()
+										{
+											if ( $$.hasClass( 'yitihit-ed' ) === false )
+											{
+												$(this).val( $(this).val().replace( /[^a-zA-Z-_ ]/gi, '' ) );
+												if ( o.editable === true)
+												{
+													$$.addClass( 'yitihit-ed' );
+												}
+											}
+										}
+									);
+								break;
 								break;
 							}
 						
@@ -130,7 +211,8 @@ if(typeof jQuery != 'undefined') {
 		*/
 		$.fn.yitihit.defaults = {
 			'format':	'title',	// title|upper|lower|numeric|alpha
-			'event' :	'blur'	// blur|realtime
+			'event' :	'blur',		// blur|realtime
+			'editable' : true		// boolean
 		};
 		
 	}(jQuery));
