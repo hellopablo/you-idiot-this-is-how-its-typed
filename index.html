@@ -55,7 +55,6 @@
 				font-family:helvetica,arial,sans-serif;
 				font-size:12px;
 				line-height:1.6em;
-				background: url(assets/bg.jpg);
 			}
 			
 			a:link,
@@ -346,8 +345,9 @@
 			<br />&nbsp;&nbsp;$(function() {
 			<br />&nbsp;&nbsp;&nbsp;&nbsp;$( 'input.upper' ).yitihit(
 			<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-			<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'format'&nbsp;: 'title',
-			<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'event'&nbsp;&nbsp;: 'blur'
+			<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'format'&nbsp;&nbsp;&nbsp;: 'title',
+			<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'event'&nbsp;&nbsp;&nbsp;&nbsp;: 'blur',
+			<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'editable' : true
 			<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 			<br />&nbsp;&nbsp;&nbsp;&nbsp;);
 			<br />&nbsp;&nbsp;});
@@ -380,9 +380,20 @@
 					<li><em>realtime</em> - correct 'as you type'</li>
 				</ul>
 			</li>
+			<li>
+				&rsaquo; <strong>editable</strong> - Allow a user to go back and change what was put in, defaults to 'true'.
+				<ul>
+					<li><em>true</em> - perform the correction only once (e.g: on a title case element mcdonald would be changed to Mcdonald,
+					setting editable to true would allow the user to go back and change it to McDonald)</li>
+					<li><em>realtime</em> - always perform the correction</li>
+				</ul>
+			</li>
 		</ul>
 		<p>
-			<small>I reckon 'as you type' is bad user experience, but I included realtime correction anyway.</small>
+			<small>
+				I reckon 'as you type' is bad user experience, but I included realtime correction anyway.
+				<br />The editable option only applies when the blur event.
+			</small>
 		</p>
 		
 		<h3>&raquo; Extend and Improve</h3>
@@ -395,6 +406,22 @@
 			That said, I want the stuff I create to be useful, if you can improve it in anyway <a href="https://github.com/HelloPablo/YouIdiotThisIsHowItsTyped">fork away on GitHub</a> and send
 			me a pull request.
 		</p>
+		
+		<h3>&raquo; Change Log</h3>
+		<ul>
+			<li>
+				&rsaquo; <strong>v1.1.0</strong> (21st September 2011)
+				<ul>
+					<li>Added the <em>editable</em> option.</li>
+				</ul>
+			</li>
+			<li>
+				&rsaquo; <strong>v1.0.0</strong> (20th September 2011)
+				<ul>
+					<li>Initial Release</li>
+				</ul>
+			</li>
+		</ul>
 		
 		<p id="footer"> 
 			&copy; 2011 <a href="http://hellopablo.co.uk">HelloPablo</a> / <a href="http://shedcollective.org">ShedCollective</a> 
