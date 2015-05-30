@@ -3,12 +3,11 @@
 /*!
 * YouIdiotThisIsHowItsTyped: a jQuery Plugin to stop people being idiots
 * @author: Pablo de la Peña (hellopablo)
-* @url: http://jquery.hellopablo.co.uk/yitihit/assetsjquery.yitihit.js
-* @documentation: http://jquery.hellopablo.co.uk/yitihit
+* @url: http://hellopablo.github.io/you-idiot-this-is-how-its-typed
+* @documentation: http://hellopablo.github.io/you-idiot-this-is-how-its-typed
 * @published: 11/09/2008
 * @updated: 26/02/2011
-* @license Creative Commons Attribution Non-Commercial Share Alike 3.0 Licence
-*		   http://creativecommons.org/licenses/by-nc-sa/3.0/
+* @license MIT
 */
 if(typeof jQuery != 'undefined') {
 	jQuery(function($) {
