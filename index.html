@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+    <head>
+        
+        <title>YouIdiotThisIsHowItsTyped : a jQuery Plugin from @hellopablo</title>
+        
+        <!--    META TAGS   -->
+        <meta charset="utf-8" />
+        
+        <!-- JAVASCRIPT[S] -->
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+            google.load("jquery", "1.4.4");
+        </script>
+        <script type="text/javascript" src="assets/jquery.yitihit.min.js" ></script>
+        <script type="text/javascript">
+        <!--//
+        
+            $(function() {
+            
+                $( 'input[name=upper]' ).yitihit( { 'format' : 'upper' } );
+                $( 'input[name=lower]' ).yitihit( { 'format' : 'lower' } );
+                $( 'input[name=title]' ).yitihit( { 'format' : 'title' } );
+                $( 'input[name=sentence]' ).yitihit( { 'format' : 'sentence' } );
+                $( 'input[name=numeric]' ).yitihit( { 'format' : 'numeric' } );
+                $( 'input[name=alpha]' ).yitihit( { 'format' : 'alpha' } );
+                $( 'input[name=alphadash]' ).yitihit( { 'format' : 'alphadash' } );
+                
+                $( 'input[name=rupper]' ).yitihit( { 'format' : 'upper', 'event' : 'realtime' } );
+                $( 'input[name=rlower]' ).yitihit( { 'format' : 'lower', 'event' : 'realtime' } );
+                $( 'input[name=rtitle]' ).yitihit( { 'format' : 'title', 'event' : 'realtime' } );
+                $( 'input[name=rsentence]' ).yitihit( { 'format' : 'sentence', 'event' : 'realtime' } );
+                $( 'input[name=rnumeric]' ).yitihit( { 'format' : 'numeric', 'event' : 'realtime' } );
+                $( 'input[name=ralpha]' ).yitihit( { 'format' : 'alpha', 'event' : 'realtime' } );
+                $( 'input[name=ralphadash]' ).yitihit( { 'format' : 'alphadash', 'event' : 'realtime' } );
+            
+            });
+        
+        //-->
+        </script>
+        
+        
+        <!-- STYLES -->
+        <style type="text/css">
+            
+            /* 
+             * 
+             * Page styles
+             * 
+             */
+            
+            body
+            {
+                font-family:helvetica,arial,sans-serif;
+                font-size:12px;
+                line-height:1.6em;
+                background: url(assets/bg.jpg);
+            }
+            
+            a:link,
+            a:visited
+            {
+                color:inherit;
+                text-decoration:none;
+                border-bottom:1px dashed;
+            }
+            a:hover
+            {
+                
+                color: #ff0080;
+                
+            }
+            
+            h1 {
+                text-align:center;
+                font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+                font-size: 25px;
+                font-weight: 300;
+                margin-bottom:15px;
+                margin-top:60px;
+            }
+            h1 strong {
+                font-family: 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+                font-size: 25px;
+                font-weight: 300;
+            }
+            h2 {
+                text-align:center;
+                font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                font-weight: 200;
+                font-style:italic;
+                color:#afafaf;
+                margin-bottom:60px;
+            }
+            h3 {
+                font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                padding-top:15px;
+                padding-bottom:5px;
+                width:650px;
+                margin:auto;
+                clear:both;
+            }
+            
+            p
+            {
+                width:650px;
+                margin:auto;
+                margin-bottom:15px;
+            }
+            
+            code
+            {
+                display:block;
+                border:1px dashed #ccc;
+                background:#f5f5f5;
+                color:#777;
+                padding:5px;
+                width:650px;
+                margin:auto;
+            }
+            
+            #footer
+            {
+                clear:both;
+                text-align:center;
+                padding-top:100px;
+                padding-bottom:60px;
+                font-size:10px;
+                color:#444;
+            }
+            
+            .left
+            {
+                float:left;
+            }
+            
+            .right
+            {
+                float:right
+            }
+            
+            fieldset
+            {
+                width:350px;
+                border:1px dashed #ccc;
+                background:#fff;
+                margin-top:30px;
+            }
+            
+            fieldset p
+            {
+                width:auto;
+            }
+            
+            legend
+            {
+                font-weight:bold;
+                font-style:normal;
+            }
+            
+            label span
+            {
+                float:left;
+                width:100px;
+                margin-left:10px;
+                display:block;
+            }
+            
+            label small
+            {
+                display:block;
+                padding-left:110px;
+                color:#ccc;
+            }
+            
+            input
+            {
+                background-color: #f8f8f8;
+                border:1px dotted #ccc;
+                border-bottom:1px solid #ccc;
+                padding:7px;
+                width:200px;
+                position:relative;
+                bottom:7px;
+            }
+            
+            #wrapper
+            {
+                width:760px;
+                margin:auto;
+            }
+            
+            ul
+            {
+                width:650px;
+                margin:auto;
+                list-style-type:none;
+                padding:0;
+            }
+            
+            li
+            {
+                padding-bottom:15px;
+            }
+            li li
+            {
+                padding-bottom:2px;
+            }
+            
+            ul ul
+            {
+                list-style-type: circle;
+                width:auto;
+                padding-left:30px;
+            }
+        
+        </style>
+        
+        <script type="text/javascript"> 
+        
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-21238338-1']);
+          _gaq.push(['_setDomainName', '.co.uk']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+        </script> 
+        
+    </head>
+    <body>
+    
+        <h1><strong>YouIdiotThisIsHowItsTyped :</strong> <em>Or YITIHIT for short, yehaw!</em></h1> 
+        <h2>Prevent idiot users from typing in sillyness into your forms.</h2> 
+        <p>
+            While moving house I decided it would be a smart idea to sell all my junk on eBay. I sold about 50 items.
+            While packaging up stuff it <strong>AMAZED</strong> me how many people are <em>lazy</em> and don't capitalise
+            their name, address or even their postcode. As it happens this is a <strong>massive</strong> pet peeve of mine.
+        </p>
+        <p>
+            So, as a result, this little plugin was born. Hopefully you'll never scream "You idiot, that's not how it's typed!"
+            when going through data ever again.
+        </p>
+    
+        <div id="wrapper">
+            <!--    ONBLUR  -->
+            <fieldset class="left">
+                <legend>Correct on blur</legend>
+                <form>
+                    <p>
+                        <label>
+                            <span>All Uppercase</span>
+                            <input type="text" name="upper" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>All Lowercase</span>
+                            <input type="text" name="lower" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Title Case</span>
+                            <input type="text" name="title" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Sentence Case</span>
+                            <input type="text" name="sentence" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Only Numbers</span>
+                            <input type="text" name="numeric" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Only Alpha</span>
+                            <input type="text" name="alpha" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Only Alpha-Dash</span>
+                            <input type="text" name="alphadash" value="" />
+                            <small>(+ dashes, underscores and spaces)</small>
+                        </label>
+                    </p>
+                </form>
+            </fieldset>
+            <!--    REALTIME    -->
+            <fieldset class="right">
+                <legend>Correct as you type</legend>
+                <form>
+                    <p>
+                        <label>
+                            <span>All Uppercase</span>
+                            <input type="text" name="rupper" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>All Lowercase</span>
+                            <input type="text" name="rlower" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Title Case</span>
+                            <input type="text" name="rtitle" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Sentence Case</span>
+                            <input type="text" name="rsentence" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Only Numbers</span>
+                            <input type="text" name="rnumeric" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Only letters</span>
+                            <input type="text" name="ralpha" value="" />
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span>Only Alpha-Dash</span>
+                            <input type="text" name="ralphadash" value="" />
+                            <small>(+ dashes, underscores and spaces)</small>
+                        </label>
+                    </p>
+                </form>
+            </fieldset>
+        </div>
+        
+        <h3>&raquo; How to use</h3>
+        <p>
+            Include jQuery and the plugin source in your <span>&lt;head&gt;</span class="code"> then instanciate the plugin on your element.
+            The code you need, the available options and their defaults are shown below:
+        </p>
+        <code>
+            &lt;script type="text/javascript"&gt;
+            <br />&nbsp;&nbsp;$(function() {
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;$( 'input.upper' ).yitihit(
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'format'&nbsp;: 'title',
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'event'&nbsp;&nbsp;: 'blur'
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;);
+            <br />&nbsp;&nbsp;});
+            <br />&lt;/script&gt;
+            <br />
+            <br />&lt;input type="text" class="upper" /&gt;
+        </code>
+        
+        <h3>&raquo; Options</h3>
+        <p>
+            There are only a few number of options available. Keep it simple my mum always said.
+        </p>
+        <ul>
+            <li>
+                &rsaquo; <strong>format</strong> - The format to apply to the input, defaults to 'title'. Can be:
+                <ul>
+                    <li><em>title</em> - title case</li>
+                    <li><em>sentence</em> - sentence case</li>
+                    <li><em>upper</em> - upper case characters only</li>
+                    <li><em>lower</em> - lower case characters only</li>
+                    <li><em>numeric</em> - numerals only</li>
+                    <li><em>alpha</em> - alpha (a-z) characters only</li>
+                    <li><em>alphadash</em> - alpha (a-z) characters, dashes, underscores and spaces only</li>
+                </ul>
+            </li>
+            <li>
+                &rsaquo; <strong>event</strong> - When to apply the filter, defaults to 'blur'*. Can be:
+                <ul>
+                    <li><em>blur</em> - correct when the element loses focus</li>
+                    <li><em>realtime</em> - correct 'as you type'</li>
+                </ul>
+            </li>
+            <li>
+                &rsaquo; <strong>editable</strong> - Allow a user to go back and change what was put in, defaults to 'true'.
+                <ul>
+                    <li><em>true</em> - perform the correction only once (e.g: on a title case element mcdonald would be changed to Mcdonald,
+                    setting editable to true would allow the user to go back and change it to McDonald)</li>
+                    <li><em>realtime</em> - always perform the correction</li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <small>
+                I reckon 'as you type' is bad user experience, but I included realtime correction anyway.
+                <br />The editable option only applies when the blur event.
+            </small>
+        </p>
+        
+        <h3>&raquo; Download</h3>
+        <p>
+            <a href="https://github.com/HelloPablo/YouIdiotThisIsHowItsTyped/zipball/Master">Download the latest version from Github</a>
+        </p>
+        
+        <h3>&raquo; Extend and Improve</h3>
+        <p>
+            This plugin was born out of a pure rage and hatred of crappy data. As with all good rage, logic is flawed and not everything was
+            considered. There are a number of user experience things I dislike but haven't <strike>bothered</strike> had time
+            to fix (like being unable to select the entire contents of the input with the keybaord).
+        </p>
+        <p>
+            That said, I want the stuff I create to be useful, if you can improve it in anyway <a href="https://github.com/hellopablo/you-idiot-this-is-how-its-typed">fork away on GitHub</a> and send
+            me a pull request.
+        </p>
+        
+        <h3>&raquo; Change Log</h3>
+        <ul>
+            <li>
+                &rsaquo; <strong>v1.1.0</strong> (21st September 2011)
+                <ul>
+                    <li>Added the <em>editable</em> option.</li>
+                </ul>
+            </li>
+            <li>
+                &rsaquo; <strong>v1.0.0</strong> (20th September 2011)
+                <ul>
+                    <li>Initial Release</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p id="footer"> 
+            &copy; 2011 <a href="http://hellopablo.co.uk">HelloPablo</a> / <a href="http://shedcollective.org">ShedCollective</a> 
+        </p> 
+    
+    </body>
+
+</html>
